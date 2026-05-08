@@ -3,9 +3,11 @@ import EventContext from "./Contexts/EventContext"
 
 export default function EventsTable() {
     const { data, EventDispatch } = useContext(EventContext);
+    
     const handleView = (event) => {
     EventDispatch({ type: "SET_SELECTED_EVENT", payload: event });
     };
+
     return(
         <div>
             <h2>Listing Events</h2>
